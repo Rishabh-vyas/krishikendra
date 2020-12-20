@@ -1,0 +1,51 @@
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'shop/business.css'%} ">
+
+<style>
+    .about_image,
+    .our_team img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+        align-items: center;
+    }
+</style>
+{% endblock css %}
+
+{% block body %}
+<!-- || ABOUT Content -->
+<main>
+    <div class="container-fluid">
+        <div class="row" style="background: radial-gradient(#ffffff, #e0f2f1);">
+            <!-- Textual Content -->
+            <div class="col-lg-7 px-5 py-4 order-lg-1 order-2">
+                <h3 class="section_head">About Us</h3>
+
+                <p class="mt-5 text-muted text-lg-left text-center px-lg-4" style="line-height: 2;">A farmer (also
+                    called an agriculturer) is a person engaged in agriculture, raising living organisms for food or raw
+                    materials. The term usually applies to people who do some combination of raising field crops,
+                    orchards, vineyards, poultry, or other livestock. A farmer might own the farmed land or might work
+                    as a laborer on land owned by others, but in advanced economies, a farmer is usually a farm owner,
+                    while employees of the farm are known as farm workers, or farmhands. However, in the not so distant
+                    past, a farmer was a person who promotes or improves the growth of (a plant, crop, etc.) by labor
+                    and attention, land or crops or raises animals (as livestock or fish).</p>
+            </div>
+
+            <!-- Banner -->
+            <div class="col-lg-5 col-sm-8 col-10 offset-lg-0 offset-sm-2 offset-1 p-5 order-lg-2 order-1">
+                <img src="{% static 'shop/images/madeinindia.png' %} " class="about_image" alt="Main Image" />
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock body %}

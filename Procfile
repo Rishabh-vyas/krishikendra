@@ -1,0 +1,1 @@
+web: gunicorn indicart.wsgi --log-file -

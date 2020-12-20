@@ -1,0 +1,73 @@
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'shop/business.css'%} ">
+
+<style>
+    .map {
+            width: 100%;
+            height: 620px;
+        }
+
+    @media screen and (max-width: 991px) {
+        .map {
+            height: 400px;
+        }
+    }
+</style>
+
+{% endblock css %}
+
+
+{% block body %}
+
+    <!-- || Contact Details -->
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 order-lg-1 order-2 p-lg-5 p-4">
+                    <p class="section_head">GET IN TOUCH</p>
+
+                    <form action="" method='POST'>
+                    {% csrf_token %}
+                        <div class="form-group mt-3">
+                            <label for="visitor_name">Your Name</label>
+                            <input type="text" id="visitor_name" name="visitor_name" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="visitor_email">Email Address</label>
+                            <input type="email" id="visitor_email" name="visitor_email" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="visitor_number">Contact Number</label>
+                            <input type="number" id="visitor_number" name="visitor_number" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="visitor_subject">Subject</label>
+                            <input type="text" id="visitor_subject" name="visitor_subject" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="visitor_message">Message</label>
+                            <textarea name="visitor_message" id="visitor_message" class="form-control" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input type="submit" value="Submit" class="btn btn-success px-4 rounded" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock body %}
