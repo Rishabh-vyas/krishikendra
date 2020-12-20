@@ -84,41 +84,6 @@
     </div>
   </div>
 
- <!-- || Latest Products -->
-  <div class="container mt-5">
-  {% for prod in allProduct %}
-    <h2 class="section_head">{{prod.product_category.category_name}}</h2>
-
-    <div class="container mt-5 products_section">
-      <div class="row">
-        {% for i in prod %}
-        <div class="col-lg-3 col-md-4 col-sm-6 px-lg-4">
-        <a href="/productdetail/{{i.product_id}}">
-          <div class="card">
-            <img src="/media/{{i.product_img_1}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">
-              <h5 class="product_name">{{i.product_name}}</h5>
-              <div class="ratings">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-                <i class="fa fa-star-o"></i>
-              </div>
-              <p class="product_price">&#x20B9; {{i.product_price}}</p>
-              </p>
-            </div>
-          </div>
-        </a>  
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-
   <!-- Offer Banner -->
   <section>
     <div class="container-fluid offer_banner">
